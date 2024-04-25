@@ -1,0 +1,49 @@
+{% load static %}
+<link lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/login.css' %}">
+	<title>User</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="../imagens/iconebarrapesquisa.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+	<!-- Cabeçalho -->
+	<div class="topart"></div>
+
+	<!-- Caixa para o usuário entrar na sua conta -->
+	<main>
+
+		<form action="{% url 'enviar_login' %}" method="post"> {% csrf_token %}
+
+			<!-- email -->
+			<div class="email">
+				<label for="email"><i class="fa-solid fa-envelope"></i></label>
+				<input type="email" id="email" name="email" placeholder="e-mail" required><br><br>
+			</div>
+
+			<!-- senha -->
+			<div class="senha">
+				<label for="senha"><i class="fa-solid fa-lock"></i></label>
+				<input type="password" id="senha" name="senha" placeholder="password" required><br><br>
+			</div>
+
+			<button type="submit" id="enviar">Entrar</button>
+		</form>
+
+		<div class="error-message">
+			<!--Mensagem de erro inserida aqui-->
+		</div>
+	</main>
+</body>

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/professor.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <h1>Área do Professor</h1>
+                <button>Sair</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="titulos">
+            <h3>Turmas do Professor(a): {{usuario_logado}}</h3>
+            <button type="submit" name="tela_cadastro"><a href="/cad_turma/{{id_logado}}"style="text-decoration: none; color: white;">Cadastrar</a></button>
+        </div>
+
+        <div class="tabela">
+            <table>
+                <tr>
+                    <th>Número</th>
+                    <th>Turma</th>
+                    <th>Ação</th>
+                </tr>
+                {% for igs in turmas_do_professor %}
+                <tr>
+                    <td>{{igs.id}}</td>
+                    <td>{{igs.nome_turma}}</td>
+                    <td>
+                        <a href="{% url 'excluir_turma' id_turma=igs.id %}" style="text-decoration: none; color: white;">
+                            <button id="exclude">Excluir</button>
+                        </a>
+                        
+                        <button id="view"><a href="/ver_atividades?id_turma={{igs.id}}&who={{id_logado}}" style="text-decoration: none; color: white;">Visualizar</a></button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
+</body>
+</body>
+</html>

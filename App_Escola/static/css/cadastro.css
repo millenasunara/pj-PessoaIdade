@@ -1,0 +1,153 @@
+/* Geral */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Cabeçalho */
+.topart {
+    background-color: #8b4513; /* Novo background color */
+    width: 100%;
+    height: 27px;
+}
+
+h1 {
+    margin-top: -60px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 150;
+    color: #2f4f4f; /* Novo color */
+}
+
+/* Caixa para o usuário criar uma conta */
+main {
+    height: 460px;
+    width: 500px;
+    background-color: #f0ffff; /* Novo background color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 200px auto;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.email,
+.senha,
+.nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.senha {
+    margin-left: 40px;
+}
+
+.email i,
+.senha i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.nome i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.senha i {
+    margin-left: -40px;
+}
+
+.email input,
+.senha input,
+.nome input {
+    padding: 10px;
+}
+
+main button {
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 40px;
+    height: 40px;
+    width: 240px;
+    align-self: center;
+    background-color: #cd853f; /* Novo background color */
+    color: white; /* Novo color */
+    border: none;
+    border-radius: 5px;
+}
+
+.newaccount {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 30px;
+}
+
+.newaccount h4 {
+    margin-bottom: 5px;
+}
+
+.newaccount a {
+    text-decoration: none;
+    color: #8b4513; /* Novo color */
+    transition: color 0.3s;
+}
+
+.newaccount a:hover {
+    color: black;
+}
+
+.newaccount li {
+    list-style: none;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: #8b4513; /* Novo background color */
+    color: #f8f7f4;
+    font-family: "Montserrat", sans-serif;
+    height: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.payments {
+    margin-left: 480px;
+    margin-top: 79px;
+}
+
+.payments img {
+    margin-top: 10px;
+}
+
+.contacts {
+    margin-left: 830px;
+}
+
+.contacts a {
+    font-size: 15px;
+    color: #f8f7f4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.copyright {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 809px;
+}
+
+.findus {
+    margin-left: 1400px;
+    margin-top: -100px;
+}
+
+.findus h4 {
+    font-size: 27px;
+    font-weight: bold;
+    margin-left: 130px;
+    margin-top: -100px;
+}

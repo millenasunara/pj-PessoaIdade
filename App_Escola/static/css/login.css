@@ -1,0 +1,193 @@
+/* Geral */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/* Cabeçalho */
+.topart {
+	background-color: #87ceeb; /* Novo background color */
+	width: 100%;
+	height: 27px;
+}
+
+/* Ícones */
+.nav-icons {
+	display: flex;
+	justify-content: flex-end;
+	padding: 5px 335px;
+	border-bottom: 0.1px solid rgb(155 155 155 / 15%);
+}
+
+.nav-icons i {
+	margin-right: 5px;
+	color: #2f4f4f; /* Novo color */
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 330px;
+	box-shadow: 0px 17px 40px -43px rgba(155, 155, 155, 1);
+}
+
+/* Links das outras páginas */
+nav li {
+	list-style: none;
+	padding: 0 35px;
+	font-family: "Montserrat", sans-serif;
+}
+
+nav li a {
+	text-decoration: none;
+	color: #4682b4; /* Novo color */
+	font-size: 16px;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+.nav-itens li a:hover {
+	color: #87ceeb; /* Novo hover color */
+}
+
+.nav-itens {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Caixa de pesquisa */
+
+.pesquisa input {
+	width: 340px;
+	font-size: 14px;
+	padding: 5px 30px;
+	border-radius: 50px;
+	border: 1px solid #e2e2e2;
+	background-color: #f0f8ff; /* Novo background color */
+}
+
+.search-icon {
+	position: relative;
+	left: 29px;
+	top: 1px;
+}
+
+/* Caixa para o usuário criar uma conta */
+main {
+	height: 500px;
+	width: 570px;
+	background-color: #f0f8ff; /* Novo background color */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	margin: 200px auto;
+	border-radius: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.email,
+.senha {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 12px;
+}
+
+.email i,
+.senha i {
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+.email input,
+.senha input {
+	padding: 10px;
+}
+
+main button {
+	font-size: 15px;
+	font-family: "Montserrat", sans-serif;
+	margin-top: 40px;
+	height: 40px;
+	width: 240px;
+	align-self: center;
+	background-color: #4682b4; /* Novo background color */
+	color: white; /* Novo color */
+	border: none;
+	border-radius: 5px;
+}
+
+.newaccount {
+	font-family: "Montserrat", sans-serif;
+	margin-top: 30px;
+}
+
+.newaccount h4 {
+	margin-bottom: 5px;
+}
+
+.newaccount a {
+	text-decoration: none;
+	color: #87ceeb; /* Novo color */
+	transition: color 0.3s;
+}
+
+.newaccount a:hover {
+	color: black;
+}
+
+.newaccount li {
+	list-style: none;
+}
+
+/* Rodapé */
+
+footer {
+	background-color: #87ceeb; /* Novo background color */
+	color: #f8f7f4;
+	font-family: "Montserrat", sans-serif;
+	height: 220px;
+	display: flex;
+	align-items: center;
+}
+
+.payments {
+	margin-left: 480px;
+	margin-top: 79px;
+}
+
+.payments img {
+	margin-top: 10px;
+}
+
+.contacts {
+	margin-left: 830px;
+}
+
+.contacts a {
+	font-size: 15px;
+	color: #f8f7f4;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.copyright {
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 809px;
+}
+
+.findus {
+	margin-left: 1400px;
+	margin-top: -100px;
+}
+
+.findus h4 {
+	font-size: 27px;
+	font-weight: bold;
+	margin-left: 130px;
+	margin-top: -100px;
+}
