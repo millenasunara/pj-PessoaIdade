@@ -1,153 +1,74 @@
-/* Geral */
-* {
-    padding: 0;
+/* cadastro.css */
+
+body {
     margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffb2cc;
 }
 
-/* Cabeçalho */
 .topart {
-    background-color: #8b4513; /* Novo background color */
-    width: 100%;
-    height: 27px;
+    height: 100px; /* ou a altura desejada para o cabeçalho */
+    background-color: #ff8cb2; /* cor do cabeçalho */
 }
 
-h1 {
-    margin-top: -60px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 150;
-    color: #2f4f4f; /* Novo color */
-}
-
-/* Caixa para o usuário criar uma conta */
 main {
-    height: 460px;
-    width: 500px;
-    background-color: #f0ffff; /* Novo background color */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    margin: 200px auto;
-    border-radius: 15px;
+    padding: 20px;
+}
+
+form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    padding: 20px;
+}
+
+.welcome-message {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
+.nome,
 .email,
-.senha,
-.nome {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 .senha {
-    margin-left: 40px;
+    margin-bottom: 20px;
 }
 
-.email i,
-.senha i {
-    font-size: 30px;
-    margin-right: 10px;
+label {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #333; /* cor do ícone */
 }
 
-.nome i {
-    font-size: 30px;
-    margin-right: 10px;
-}
-
-.senha i {
-    margin-left: -40px;
-}
-
-.email input,
-.senha input,
-.nome input {
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: calc(100% - 40px);
     padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #ccc; /* cor da borda */
+    border-radius: 5px;
+    outline: none;
 }
 
-main button {
-    font-size: 15px;
-    font-family: "Montserrat", sans-serif;
-    margin-top: 40px;
-    height: 40px;
-    width: 240px;
-    align-self: center;
-    background-color: #cd853f; /* Novo background color */
-    color: white; /* Novo color */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8cb2; /* cor do botão */
     border: none;
     border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.newaccount {
-    font-family: "Montserrat", sans-serif;
-    margin-top: 30px;
+button[type="submit"]:hover {
+    background-color: #ff6b8b; /* cor do botão ao passar o mouse */
 }
 
-.newaccount h4 {
-    margin-bottom: 5px;
-}
-
-.newaccount a {
-    text-decoration: none;
-    color: #8b4513; /* Novo color */
-    transition: color 0.3s;
-}
-
-.newaccount a:hover {
-    color: black;
-}
-
-.newaccount li {
-    list-style: none;
-}
-
-/* Rodapé */
-
-footer {
-    background-color: #8b4513; /* Novo background color */
-    color: #f8f7f4;
-    font-family: "Montserrat", sans-serif;
-    height: 220px;
-    display: flex;
-    align-items: center;
-}
-
-.payments {
-    margin-left: 480px;
-    margin-top: 79px;
-}
-
-.payments img {
-    margin-top: 10px;
-}
-
-.contacts {
-    margin-left: 830px;
-}
-
-.contacts a {
-    font-size: 15px;
-    color: #f8f7f4;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.copyright {
-    font-weight: bold;
-    font-size: 15px;
+.error-message {
+    text-align: center;
+    color: red; /* cor da mensagem de erro */
     margin-top: 20px;
-    margin-left: 809px;
-}
-
-.findus {
-    margin-left: 1400px;
-    margin-top: -100px;
-}
-
-.findus h4 {
-    font-size: 27px;
-    font-weight: bold;
-    margin-left: 130px;
-    margin-top: -100px;
 }
