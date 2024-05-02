@@ -1,46 +1,79 @@
 {% load static %}
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/cad_turma.css' %}">
-    <title>Cadastro de Turma</title>
-</head>
+  <head>
+    <!-- =-=-=-=-=-= CSS =-=-=-=-=-= -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/cad_turma.css' %}"
+    />
+
+    <!-- =-=-=-=-=-= ICON FAV =-=-=-=-=-= -->
+    <link
+      rel="shortcut icon"
+      type="icon"
+      href="{% static 'imagens/logo.png' %}"
+    />
+
+    <title>Cadastro Turma</title>
+  </head>
 
 <body>
+
     <header>
-        <nav>
-            <div class="nav-bar">
-
-                <h1 id="nome_logado">Cadastro de Turmas do Professor(a) {{usuario_logado}}</h1>
-                <button>Sair</button>
-
-            </div>
-        </nav>
+        <div class="logo">
+            <img src="{% static 'imagens/logo.png' %}" />
+            <h1>SCHOOL</h1>
+        </div>
     </header>
 
-    <main>
-        <div class="form-turma">
-            <div class="turmas">
-                <form id="form" class="form" action="{% url 'salvar_turma_nova' %}" method="post">{% csrf_token %}
-                    <h1>Cadastre uma nova turma:</h1>
-
-                    <label for="descrition">Nome:</label>
-
-                    <input type="hidden" name="id_professor" id="id_logado" value="{{id_logado}}">
-                    <input type="text" id="nome_turma" name="nome_turma" value="" placeholder="Insira o nome da turma">
-                    <a style="display: flex;justify-content: center;font-size: 14px;padding-bottom: 10px;">Mínimo 3 caractéres</a>
-                    <button type="submit" class="btn_conf_cancel btn_confirmar">Cadastrar</button>
-                </form>
-            </div>
-
-            <div class="error-message">
-                <!--Mensagem de erro inserida aqui-->
-            </div>
-
+    <div class="fundo_menu">
+        <div class="nome_sistema">
+            <h1>Sistema de Apoio aos Professores</h1>
         </div>
-    </main>
+        <nav class="menu">
+            <ul>
+                <li id="nome_logado"> Professor(a) logado:<a href=""> {{usuario_logado}} | </a></li>
+                <li><a href="../accounts/logout">SAIR</a></li>
+            </ul>
+        </nav>
+    </div>
+    
 
+    
+
+<div class="principal">
+    <div class="container">
+        <section class="enquadramento">
+            <h1> Cadastro de Turmas </h1>
+        </section>
+        
+        {% if messages %}
+        <ul class="mensagem_do_servidor" style="text-align:center">
+            {% for mensagem in messages %}
+            <li style="text-align: center;"{% if mensagem.tags %}class="alert alert-{{message.tags}}"{% endif %}>{{mensagem}}</li>
+            {% endfor %}
+            
+        </ul>
+
+        {% endif %}
+
+        <form id="form" class="form" method="post" action="{% url 'salvar_turma_nova' %}">{% csrf_token %}
+            <div class="form-content">
+
+                <input type="hidden" name="id_professor" id="id_logado" value="{{id_logado}}"/>
+                <input type="text" id="nome_turma" name="nome_turma" value="" placeholder="Digite o nome da turma"/>
+                <span style="color:#ec6290de">O nome deve ter mínimo 3 caracteres</span>
+            </div>
+
+            <div class="botoes">
+                <div class="botao-confirmar">
+                    <button type="submit" class="btn_conf_cancel btn_confirmar">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
-
 </html>

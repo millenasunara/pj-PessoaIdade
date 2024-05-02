@@ -1,60 +1,78 @@
 {% load static %}
-<link lang="pt-br">
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- =-=-=-=-=-= CSS =-=-=-=-=-= -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/cadastro.css' %}"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
-    <title>User</title>
-</head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" href="../imagens/iconebarrapesquisa.png" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- =-=-=-=-=-= ICON FAV =-=-=-=-=-= -->
+    <link
+      rel="shortcut icon"
+      type="icon"
+      href="{% static 'imagens/logo.png' %}"
+    />
 
+    <title>Cadastrar</title>
+  </head>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <body>
+    <header>
+      <img src="{% static 'imagens/logo.png' %}" />
+      <h1>SCHOOL</h1>
+    </header>
 
-<body>
-<!-- Cabeçalho -->
-<div class="topart"></div>
-
-<main>
-    
-    <form action="/confirmar_cadastro/" method="post"> 
-
-        <div class="welcome-message">
-            {{welcome_message}}
-        </div>
+    <div class="form-area">
+      <form action="/confirmar_cadastro/" method="post">
+        <div class="welcome-message">{{welcome_message}}</div>
 
         {% csrf_token %}
 
+        <h1>Cadastre-se</h1>
         <!-- nome -->
-        <div class="nome">
-            <label for="nome"><i class="fa-solid fa-envelope"></i></label>
-            <input id="nome" name="nome" placeholder="nome" required><br><br>
+        <div class="input-group">
+          <input
+            id="nome"
+            name="nome"
+            placeholder="nome"
+            required
+          /><br /><br />
         </div>
 
         <!-- email -->
-        <div class="email">
-            <label for="email"><i class="fa-solid fa-envelope"></i></label>
-            <input type="email" id="login" name="login" placeholder="e-mail" value="{{login}}" required><br><br>
+        <div class="input-group">
+          <input
+            type="email"
+            id="login"
+            name="login"
+            placeholder="e-mail"
+            value="{{login}}"
+            required
+          /><br /><br />
         </div>
 
         <!-- senha -->
-        <div class="senha">
-            <label for="senha"><i class="fa-solid fa-lock"></i></label>
-            <input type="password" id="senha" name="senha" placeholder="password" required><br><br>
+        <div class="input-group w50">
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="password"
+            required
+          /><br /><br />
         </div>
 
-        <button type="submit" id="enviar">Cadastrar</button>
-    </form>
+        <div class="input-group">
+          <button id="enviar">Cadastrar</button>
+        </div>
+      </form>
 
-    <div class="error-message">
+      <div class="error-message">
         <!--Mensagem de erro inserida aqui-->
+      </div>
     </div>
-</main>
-</body>
+  </body>
+</html>
