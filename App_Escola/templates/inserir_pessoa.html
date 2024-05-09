@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    <title>Inserir Pessoa</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Inserir Pessoa</h2>
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit" class="salvar-button">Salvar</button>
+      </form>
+      <a href="{% url 'lista_pessoas' %}">
+        <button class="ver-lista-button">Ver Lista</button>
+      </a>
+    </div>
+  </body>
+</html>

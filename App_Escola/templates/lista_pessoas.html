@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>Lista de Pessoas</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Lista de Pessoas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Ações</th> <!-- Nova célula para "Ações" -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for pessoa in pessoas %}
+            <tr>
+                <td>{{ pessoa.nome }}</td>
+                <td>{{ pessoa.idade }}</td>
+                <td class="button-container">
+                    <form method="post" action="{% url 'excluir_pessoa' pessoa.id %}">
+                        {% csrf_token %}
+                        <button class="excluir-button" type="submit">Excluir</button>
+                    </form>
+                    <a href="{% url 'editar_pessoa' pessoa.id %}" class="editar-button">Editar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+    <a href="{% url 'inserir_pessoa' %}"><button class="voltar-button">Voltar</button></a>
+  </div> 
+</body>
+</html>

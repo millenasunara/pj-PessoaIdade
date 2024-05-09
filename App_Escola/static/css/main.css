@@ -1,0 +1,174 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Alinhar conteúdo no centro */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Alinhar itens ao centro */
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    /* Estender os campos de entrada para ocupar toda a largura do contêiner */
+    box-sizing: border-box;
+    /* Garante que o tamanho total do elemento inclua o preenchimento e a borda */
+}
+
+/* Botão "Ver Lista" */
+.ver-lista-button {
+    background-color: #f8d063;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.ver-lista-button:hover {
+    background-color: #f5c74a;
+}
+
+/* Botão Salvar */
+button.salvar-button {
+    background-color: #fd82a1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button.salvar-button:hover {
+    background-color: #db5677;
+}
+
+/* Estilo Tabela */
+table {
+    width: 100%;
+    /* A tabela ocupa toda a largura disponível */
+    border-collapse: collapse;
+    /* Mesclar as bordas das células */
+}
+
+thead th {
+    background-color: #f8d063;
+    /* Cor de fundo do cabeçalho da tabela */
+    color: #fff;
+    /* Cor do texto do cabeçalho da tabela */
+    padding: 10px;
+    /* Espaçamento interno do cabeçalho */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+    /* Cor de fundo das linhas pares */
+}
+
+tbody td {
+    padding: 10px;
+    /* Espaçamento interno das células */
+}
+
+/* Botão Excluir */
+.excluir-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 5px;
+    /* Adiciona margem à direita */
+}
+
+.excluir-button:hover {
+    background-color: #c0392b;
+}
+
+/* Botão Editar */
+.editar-button {
+    background-color: #85c1f8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 5px;
+    /* Adiciona margem à direita */
+}
+
+.editar-button:hover {
+    background-color: #c0392b;
+}
+
+
+/* Botão Voltar */
+.voltar-button {
+    background-color: #fd82a1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.voltar-button:hover {
+    background-color: #db5677;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+}
+
+/* Ajuste de margem para os botões */
+.excluir-button,
+.editar-button {
+    margin-left: 10px; /* Adicione a margem desejada */
+    margin-right: 10px; /* Adicione a margem desejada */
+}
